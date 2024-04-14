@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Post from '../posts/Post'; 
 import LoginButton from '../components/LoginButton'; 
+import Sidebar from "../sidebar/sidebar"; // Corrected import with uppercase "S"
 
 import { supabase } from '../supabaseClient'; // Ensure the path is correct
 
@@ -42,21 +43,24 @@ function Home() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div>
-        <div className="top-right">
-            <LoginButton />
-        </div>
-        {/* <h1>Hello, {userName}!</h1> */}
-        <div className="grid-container">
-            {posts.length > 0 ? (
-                posts.map(post => <Post key={post.id} post={post} />)
-            ) : (
-                <p>No posts available</p>
-            )}
+    <div className="flex-container">
+        <Sidebar />
+        <div className="main-content">
+            <div className="top-right">
+                <LoginButton />
+            </div>
+            {/* <h1>Hello, {userName}!</h1> */}
+            <div className="grid-container">
+                {posts.length > 0 ? (
+                    posts.map(post => <Post key={post.id} post={post} />)
+                ) : (
+                    <p>No posts available</p>
+                )}
+            </div>
         </div>
     </div>
-    
-  );
+);
+
 }
 
 export default Home;
