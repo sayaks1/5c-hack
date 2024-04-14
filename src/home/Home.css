@@ -31,9 +31,26 @@
     top: 0;
     margin: 10px; /* Adds space from the top right corner */
     text-align: right;
-}
+  }
 
 .grid-container {
     margin-top: 50px; /* Ensure there's space below the button if needed */
+    width: 100%;
 }
   
+/* Styles.css */
+.flex-container {
+    display: flex;
+    height: 100%; /* Adjust height as necessary */
+}
+
+.sidebar {
+    width: 250px; /* Adjust based on your actual sidebar width */
+    flex-shrink: 0; /* Prevents the sidebar from shrinking */
+}
+
+.main-content {
+    flex-grow: 1; /* Takes up the remaining space */
+    position: relative; /* For positioning top-right elements absolutely within */
+}
+
