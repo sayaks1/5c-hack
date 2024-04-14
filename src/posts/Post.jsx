@@ -11,7 +11,7 @@ function Post({ post }) {
             <p>Date Posted: {new Date(post.created_at).toLocaleDateString('en-US', {
                 year: 'numeric', month: 'long', day: 'numeric'
             })}</p>
-            <p>Posted by: {post.seller_id}</p>
+            <p>Posted by: {post.seller_name}</p>
             {post.image && <img src={post.image} alt={post.title} style={{ maxWidth: '100%', maxHeight: '200px' }} />}
         </div>
     );
