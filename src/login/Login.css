@@ -1,0 +1,40 @@
+/* Update login-form to use grid layout */
+.login-form {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+/* Update login-form input to add padding */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Update login-form button to add padding, margin, and background color */
+.login-form button[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+}
+
+/* Update login-form button hover state */
+.login-form button[type="submit"]:hover {
+    background-color: #004494;
+}
+
+/* Update login-form input and button focus state */
+.login-form input:focus,
+.login-form button:focus {
+    outline: none;
+    border-color: #0056b3;
+}

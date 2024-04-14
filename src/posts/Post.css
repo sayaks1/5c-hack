@@ -1,0 +1,10 @@
+.post {
+    width: 300px; /* Fixed width */
+    height: auto; /* Height adjusts to content */
+    padding: 20px;
+    margin: 20px 0;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+
+
